@@ -50,7 +50,7 @@ public class Program {
         acc1.userName = "maianh1";
         acc1.department = dep1;
         acc1.position = pos1;
-        acc1.createDate = new Date(2020-11-12);
+        acc1.createDate = new Date(2020 - 11 - 12);
 
 
         Account acc2 = new Account();
@@ -59,7 +59,7 @@ public class Program {
         acc2.userName = "maianh2";
         acc2.department = dep2;
         acc2.position = pos2;
-        acc2.createDate = new Date(2010-12-15);
+        acc2.createDate = new Date(2010 - 12 - 15);
 
 
         Account acc3 = new Account();
@@ -68,7 +68,7 @@ public class Program {
         acc3.userName = "maianh3";
         acc3.department = dep3;
         acc3.position = pos3;
-        acc3.createDate = new Date(2015-10-18);
+        acc3.createDate = new Date(2015 - 10 - 18);
 
         System.out.println(" Thông tin các tài khoản ");
         System.out.println(acc1);
@@ -95,25 +95,23 @@ public class Program {
         System.out.println(group3);
 
 
-
         // Tạo GroupAccount
         GroupAccount ga1 = new GroupAccount();
         ga1.groupID = 1;
-        ga1.joinDate = new Date(2011-10-12);
+        ga1.joinDate = new Date(2011 - 10 - 12);
 
         GroupAccount ga2 = new GroupAccount();
         ga2.groupID = 2;
-        ga2.joinDate = new Date(2011-10-12);
+        ga2.joinDate = new Date(2011 - 10 - 12);
 
         GroupAccount ga3 = new GroupAccount();
         ga3.groupID = 3;
-        ga3.joinDate = new Date(2011-10-12);
+        ga3.joinDate = new Date(2011 - 10 - 12);
 
         System.out.println(" Thông tin các User ");
         System.out.println(ga1);
         System.out.println(ga2);
         System.out.println(ga3);
-
 
 
         // Tạo TypeQuestion
@@ -154,6 +152,54 @@ public class Program {
         System.out.println(cq3);
 
 
+        // TestingSystem_Assignment_2
+        // Question 1:  Question 3: Kiểm tra account thứ 2
+        //Nếu không có phòng ban (tức là department == null) thì sẽ in ra text "Nhân viên này chưa có phòng ban"
+        if (acc2.department == null) {
+            System.out.println("Nhân viên này chưa có phòng ban");
+        } else {
+            System.out.println("Phònh ban nhân viên này là " + acc2.department.departmentName);
+        }
+
+
+        // Question 2:
+        if (acc2.groups == null) {
+            System.out.println("Nhân viên này chưa có group");
+        } else if (acc2.groups.length == 1 || acc2.groups.length == 2) {
+            System.out.println("Group của nhân viên này là Java Fresher, C# Fresher");
+        } else if (acc2.groups.length == 3) {
+            System.out.println("Nhân viên này là người quan trọng, tham gia nhiều group ");
+        } else if (acc2.groups.length == 4) {
+            System.out.println("Nhân viên này là người hóng chuyện, tham gia tất cả các group ");
+        }
+
+
+        // Question 3:
+        System.out.println(acc2.department == null ? "Nhân viên này chưa có phòng ban" : "Phòng ban nhân viên này là " + acc2.department.departmentName);
+
+
+        // Question 4:
+        System.out.println(acc1.position.name == PositionName.DEV ? "Đây là Developer" : "Người này không phải là Developer" + acc1.position.name);
+
+
+        // Question 5:
+
+        // Question 6:
+        // Question 7:
+
+        // Question 8:
+        // Question 9:
+        // Question 10:
+
+
+
     }
 
+
 }
+
+
+
+
+
+
